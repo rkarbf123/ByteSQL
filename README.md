@@ -1,1 +1,2 @@
-# A Lightweight Relational Database Engine Built in Python
+# ByteSQL
+A Lightweight Relational Database Engine Built in Python
