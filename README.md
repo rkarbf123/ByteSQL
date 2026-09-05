@@ -1,6 +1,6 @@
 # ByteSQL
 
-<p align="center">
+<p>
   <strong>파이썬 기반 경량 관계형 데이터베이스</strong>
 </p>
 
