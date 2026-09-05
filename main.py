@@ -57,7 +57,7 @@ def main():
             break
         except Exception as e:
             print(f"Error: {e}")
-            # traceback.print_exc() # 디버깅 테스트
+            # traceback.print_exc() # 디버깅
 
 
 if __name__ == "__main__":
