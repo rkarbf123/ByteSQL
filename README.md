@@ -1,7 +1,7 @@
 # ByteSQL
 
 <p align="center">
-  <strong>Python Lightweight Relational Database</strong>
+  <strong>파이썬 기반 경량 관계형 데이터베이스</strong>
 </p>
 
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)
