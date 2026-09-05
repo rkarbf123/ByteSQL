@@ -1,2 +1,52 @@
 # ByteSQL
-A Lightweight Relational Database Engine Built in Python
+
+## 주요 기능
+
+### 1. 스토리지 엔진 & 페이지 시스템
+- **4096바이트 고정 크기 페이지(`Page`)** 기반 파일 I/O 구현
+- 로컬 **`.db` 파일**을 통한 데이터 영속성(Persistence) 지원
+- **Page 0**을 메타데이터 페이지로 활용
+  - 테이블 스키마
+  - 인덱스 정보
+  - 기타 데이터베이스 메타데이터
+- 메타데이터 **JSON 직렬화 및 관리**
+
+### 2. 레코드 시스템
+- Python `struct` 모듈을 활용한 **바이너리 레코드 직렬화/역직렬화**
+- 기본 데이터 타입 지원
+  - `INT`
+  - `TEXT`
+
+### 3. SQL Lexer & Parser
+- 정규식 기반 커스텀 **Lexer**를 통한 SQL 토큰화(Tokenization)
+- SQL 문장을 내부 **AST(Abstract Syntax Tree)** 구조로 변환
+- SQL 구문 분석 및 실행을 위한 파싱 계층 분리
+
+### 4. Query Executor & CRUD
+- `CREATE TABLE`
+  - 테이블 생성
+  - `INT`, `TEXT` 컬럼 정의 및 스키마 저장
+- `INSERT INTO`
+  - 데이터 타입 검증
+  - 레코드 바이너리 직렬화
+  - 페이지 기반 데이터 저장
+- `SELECT`
+  - 전체 컬럼(`*`) 조회
+  - 특정 컬럼 조회
+  - `WHERE` 조건 필터링 지원
+  - 지원 연산자: `=`, `!=`, `<`, `>`, `<=`, `>=`
+- `CREATE INDEX`
+  - 인덱스 메타데이터 등록
+  - 쿼리 실행 시 **Index Scan** 경로 지원
+
+### 5. CLI / REPL
+- 터미널 기반 대화형 SQL 인터페이스 제공
+- 실행 방법:
+  ```bash
+  python main.py <db이름>
+  ```
+- 메타 명령어 지원:
+  - `.help` - 사용 가능한 명령어 확인
+  - `.tables` - 테이블 목록 조회
+  - `.stats` - 데이터베이스 통계 조회
+  - `.exit` - REPL 종료
