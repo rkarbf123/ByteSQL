@@ -17,7 +17,7 @@
 
 ### 3. SQL Lexer & Parser
 - 정규식 기반 커스텀 **Lexer**를 통한 SQL 토큰화
-- SQL 문장을 내부 **AST(Abstract Syntax Tree)** 구조로 변환
+- SQL 문장을 내부 **AST** 구조로 변환
 - SQL 구문 분석 및 실행을 위한 파싱 계층 분리
 
 ### 4. Query Executor & CRUD
