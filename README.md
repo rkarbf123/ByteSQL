@@ -1,4 +1,4 @@
-# MiniDB
+# ByteSQL
 
 <p align="center">
   <strong>Python Lightweight Relational Database</strong>
