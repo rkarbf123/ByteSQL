@@ -1,0 +1,75 @@
+# MiniDB
+
+<p align="center">
+  <strong>Python Lightweight Relational Database</strong>
+</p>
+
+![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)
+
+## Features
+
+### Database
+
+- 데이터베이스 파일 생성 및 로드
+- 데이터 영속성
+- 데이터베이스 메타데이터 관리
+
+### Table
+
+- 테이블 생성 및 삭제
+- 테이블 목록 및 스키마 조회
+- 컬럼 정의 및 자료형 관리
+- INT, FLOAT, TEXT, BOOL 지원
+
+### SQL
+
+- CREATE TABLE, DROP TABLE
+- INSERT, UPDATE, DELETE
+- SELECT
+- WHERE, AND, OR
+- ORDER BY, ASC, DESC
+- LIMIT
+- 비교 연산자 지원 (`=`, `!=`, `<`, `>`, `<=`, `>=`)
+
+### SQL Parser
+
+- SQL Lexer
+- Tokenization
+- SQL Parser
+- AST 생성
+- SQL 문법 오류 처리
+
+### Storage Engine
+
+- 파일 기반 데이터 저장
+- 고정 크기 Page 관리
+- Page 단위 읽기 및 쓰기
+- Binary Record 저장
+- Record 직렬화 및 역직렬화
+- 데이터베이스 재실행 후 데이터 복구
+
+### Index
+
+- Index 생성 및 삭제
+- B-Tree 기반 Index
+- Index 탐색
+- Index Scan
+- Full Table Scan
+- Index를 이용한 조건 검색
+
+### Query Processing
+
+- SQL을 AST로 변환
+- Query Plan 생성
+- 조건 필터링
+- 정렬 처리
+- 결과 제한
+- Full Scan과 Index Scan 선택
+- Query Optimization
+
+### CLI
+
+- 터미널 기반 REPL
+- SQL 명령 실행
+- `.help`, `.tables`, `.schema`, `.indexes`, `.stats`, `.exit`
+- 명령어 및 SQL 오류 처리
